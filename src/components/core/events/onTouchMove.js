@@ -22,6 +22,7 @@ export default function (event) {
     touches.startY = pageY;
     return;
   }
+
   if (!swiper.allowTouchMove) {
     // isMoved = true;
     swiper.allowClick = false;
@@ -36,6 +37,7 @@ export default function (event) {
     }
     return;
   }
+
   if (data.isTouchEvent && params.touchReleaseOnEdges && !params.loop) {
     if (swiper.isVertical()) {
       // Vertical

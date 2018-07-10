@@ -19,7 +19,9 @@ export default function (index = 0, speed = this.params.speed, runCallbacks = tr
     swiper.emit('beforeSlideChangeStart');
   }
 
-  const translate = -snapGrid[snapIndex];
+  let translate = -snapGrid[snapIndex];
+
+  if (params.centeredSlidesNoGap && translate > 0) translate = 0;
 
   // Update progress
   swiper.updateProgress(translate);

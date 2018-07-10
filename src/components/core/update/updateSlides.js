@@ -149,7 +149,7 @@ export default function () {
     slidesSizesGrid.push(slideSize);
 
 
-    if (params.centeredSlides) {
+    if (params.centeredSlides || params.centeredSlidesNoGap) {
       slidePosition = slidePosition + (slideSize / 2) + (prevSlideSize / 2) + spaceBetween;
       if (prevSlideSize === 0 && i !== 0) slidePosition = slidePosition - (swiperSize / 2) - spaceBetween;
       if (i === 0) slidePosition = slidePosition - (swiperSize / 2) - spaceBetween;
